@@ -3,13 +3,45 @@ html
     scroll-behavior: smooth;
 }
 
-body 
-{
+body {
     background-color: #250f1d;
-    
     background-image: url('../imgs/artwork_background.png');
     background-repeat: no-repeat;
+    background-size: cover; /* Adjust the background size as needed */
+}
 
+.header {
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    width: auto;
+    height: 50px;
+    display: block;
+}
+
+/* Add gradient background using a pseudo-element */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#26001b, #26001b10);
+    z-index: -1; /* Place it behind the header content */
+}
+
+/* Add a new div for the background image */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/artwork_background.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust the background size as needed */
+    z-index: -1; /* Place it behind the header */
 }
 
 .a 
@@ -32,16 +64,6 @@ body
 #btn-small
 {
     display: none;
-}
-
-.header
-{
-    padding-left: 10px;
-    width: auto;
-    height: 50px;
-    display:block;
-    background-color: #250f1d; /* For browsers that do not support gradients */
-    background-image: linear-gradient(#26001b, rgba(255, 0, 0, 0.253));
 }
 
 .inner-header
@@ -85,6 +107,7 @@ body
     height: 100%;
     vertical-align: middle;
     float: left;
+    padding-top: 5px;
 }
 
 .navigation a li
@@ -96,14 +119,65 @@ body
     height: 100%;
     color: whitesmoke;
     padding-right: 20px;
-}
-.navigation a:hover
-{
-    background-color: rgba(255, 0, 0, 0.63);
+    padding-top: 10px;
 }
 
+h1
+{
+    font-size: 100px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Goodlight;
+}
+
+h3
+{
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Alef;
+}
+
+
+.shadowtext {
+    color: #fff;
+    text-shadow:
+        0 0 30px #11010d,
+        0 0 30px #11010d,
+        0 0 30px #11010d;
+}
+
+.inline-heading {
+    display: inline-block; /* Change the display property */
+}
+
+.pisca{
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.middle{
+    text-align: center;
+}
 
 @font-face {
     font-family: Goodlight;
     src:url(Fonts/Goodlight.otf);
 }
+
+@font-face {
+    font-family: Alef;
+    src:url(Fonts/Alef-Regular.ttf);
+}
+
+@keyframes example {
+    0%    {color:rgba(255, 255, 255, 0)}
+    15%   {color:rgb(255, 255, 255)}
+    30%   {color:rgba(255, 255, 255, 0)}
+    45%   {color:rgb(255, 255, 255)}
+    60%   {color:rgba(255, 255, 255, 0)}
+    75%  {color:rgb(255, 255, 255)}
+    90%   {color:rgba(255, 255, 255, 0)}
+}
+
