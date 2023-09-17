@@ -78,6 +78,7 @@ body {
     height: 100%;
     display: table;
     float: left;
+    padding-top: 10px;
 }
 
 .logo-container img
