@@ -1,0 +1,33 @@
+#games{
+    background-color:#750550 ;
+    font-family: Cocogoose;
+    font-style: normal;
+}
+
+#games p{
+    font-size: 172px;
+    text-align: center;
+}
+
+#box{
+    width:374px;
+    height:448px;
+    background:#22223E;
+    margin: 20px;
+	border-radius: 25px;
+    float:left;
+}
+
+#box h1{
+    font-family: LemonMilk;
+    font-style: bold;
+    float: left;
+    margin: 10px;
+}
+
+#box p{
+    font-family: Cocogoose;
+    font-style: normal;
+    float: left;
+    margin: 10px;
+}
