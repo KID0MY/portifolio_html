@@ -163,8 +163,24 @@ p{
         0 0 30px #11010d;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+/* Reset margin and padding for child elements */
+.container * {
+    margin: 0;
+    padding: 0;
+}
+
 .inline-heading {
-    display: inline-block; /* Change the display property */
+    display: inline-block;
+     /* Change the display property */
 }
 
 .pisca{
@@ -176,6 +192,7 @@ p{
 .middle{
     text-align: center;
 }
+
 
 @font-face {
     font-family: Goodlight;
