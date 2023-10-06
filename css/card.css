@@ -5,7 +5,7 @@
     }   
 
 .card {
-    height: 350px;
+    height: 380px;
     width: 400px;
     min-width: 250px;
     padding: 1.5rem;
@@ -24,11 +24,14 @@
     transform: translateX(130px);
 }
 
-
-.card:not(:first-child) {
-    margin-left: -130px;
+.card-content p{
+    vertical-align: text-top;
 }
 
+
+.card:not(:first-child) {
+    margin-left: -90px;
+}
 
 .card-header {
     margin-bottom: auto;
